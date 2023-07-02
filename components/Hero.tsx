@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <section class='ud-hero' id='about'>
+    <section class='ud-hero' id='home'>
       <div class='container'>
         <div class='row'>
           <div class='col-lg-12'>
