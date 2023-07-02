@@ -16,6 +16,7 @@ import {
 } from '@/utils/db.ts';
 import { DAY, WEEK } from 'std/datetime/constants.ts';
 import Hero from '../components/Hero.tsx';
+import About from '../components/About.tsx';
 
 interface HomePageData extends State {
   itemsUsers: User[];
@@ -77,6 +78,7 @@ export default function HomePage(props: PageProps<HomePageData>) {
     <>
       <Head href={props.url.href} />
       <Hero />
+      <About />
       <div class={`${SITE_WIDTH_STYLES} flex-1 px-4`}>
         <TimeSelector />
         {props.data.items.map((item, index) => (
