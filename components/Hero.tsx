@@ -6,16 +6,17 @@ const Hero = () => {
           <div class='col-lg-12'>
             <div class='ud-hero-content wow fadeInUp' data-wow-delay='.2s'>
               <h1 class='ud-hero-title'>
-                Validacion de datos KYC de manera rapida y confiable
+                Validacion de datos confiable, rapida y economica
               </h1>
               <p class='ud-hero-desc'>
-                Multidisciplinary Web Template Built with Your Favourite
-                Technology - HTML Bootstrap, Tailwind and React NextJS.
+                Veridata ofrece una serie de APIs para validacion de datos de
+                identidad mas comunes en lationamerica, por ejemplo INE (MEX) o
+                Registraudria (COL).
               </p>
               <ul class='ud-hero-buttons'>
                 <li>
                   <a
-                    href='https://links.uideck.com/play-bootstrap-download'
+                    href='/account'
                     rel='nofollow noopener'
                     target='_blank'
                     class='ud-main-btn ud-white-btn'
@@ -25,12 +26,12 @@ const Hero = () => {
                 </li>
                 <li>
                   <a
-                    href='https://github.com/uideck/play-bootstrap'
+                    href='/docs'
                     rel='nofollow noopener'
                     target='_blank'
                     class='ud-main-btn ud-link-btn'
                   >
-                    Learn More <i class='lni lni-arrow-right'></i>
+                    Documentacion
                   </a>
                 </li>
               </ul>
@@ -39,25 +40,8 @@ const Hero = () => {
               class='ud-hero-brands-wrapper wow fadeInUp'
               data-wow-delay='.3s'
             >
-              <img
-                class='mx-auto'
-                src='assets/images/hero/brand.svg'
-                alt='brand'
-              />
+              <img class='mx-auto' src='/images/hero/brand.svg' alt='brand' />
             </div>
-            {/* <div class='ud-hero-image wow fadeInUp' data-wow-delay='.25s'>
-              <img src='assets/images/hero/hero-image.svg' alt='hero-image' />
-              <img
-                src='assets/images/hero/dotted-shape.svg'
-                alt='shape'
-                class='shape shape-1'
-              />
-              <img
-                src='assets/images/hero/dotted-shape.svg'
-                alt='shape'
-                class='shape shape-2'
-              />
-            </div> */}
           </div>
         </div>
       </div>
