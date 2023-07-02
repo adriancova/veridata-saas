@@ -24,20 +24,20 @@ const Navbar = (props: NavBarProps) => {
   const headerNavItems = [
     {
       href: '/#',
-      label: 'Home',
+      label: 'Inicio',
       class: 'active',
     },
     {
       href: '/#about',
-      label: 'About',
+      label: 'Acerca de',
     },
     {
       href: '/#pricing',
-      label: 'Pricing',
+      label: 'Precios',
     },
     {
       href: '/#contact',
-      label: 'Contact',
+      label: 'Contacto',
     },
   ];
   return (
@@ -66,7 +66,7 @@ const Navbar = (props: NavBarProps) => {
               ) : (
                 <div class='navbar-btn d-none d-sm-inline-block'>
                   <a class='ud-main-btn ud-white-btn' href='/account'>
-                    Sign In
+                    Ingresar
                   </a>
                 </div>
               )}
