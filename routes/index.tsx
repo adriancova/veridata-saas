@@ -1,10 +1,10 @@
 // Copyright 2023 the Deno authors. All rights reserved. MIT license.
-import type { Handlers, PageProps } from "$fresh/server.ts";
-import { INPUT_STYLES } from "@/utils/constants.ts";
-import { calcLastPage, calcPageNum, PAGE_LENGTH } from "@/utils/pagination.ts";
-import type { State } from "./_middleware.ts";
-import ItemSummary from "@/components/ItemSummary.tsx";
-import PageSelector from "@/components/PageSelector.tsx";
+import type { Handlers, PageProps } from '$fresh/server.ts';
+import { INPUT_STYLES } from '@/utils/constants.ts';
+import { calcLastPage, calcPageNum, PAGE_LENGTH } from '@/utils/pagination.ts';
+import type { State } from './_middleware.ts';
+import ItemSummary from '@/components/ItemSummary.tsx';
+import PageSelector from '@/components/PageSelector.tsx';
 import {
   compareScore,
   getAllItems,
@@ -13,8 +13,9 @@ import {
   getManyUsers,
   type Item,
   type User,
-} from "@/utils/db.ts";
-import { DAY, WEEK } from "std/datetime/constants.ts";
+} from '@/utils/db.ts';
+import { DAY, WEEK } from 'std/datetime/constants.ts';
+import Hero from '../components/Hero.tsx';
 
 interface HomePageData extends State {
   itemsUsers: User[];
@@ -24,7 +25,7 @@ interface HomePageData extends State {
 }
 
 function calcTimeAgoFilter(url: URL) {
-  return url.searchParams.get("time-ago");
+  return url.searchParams.get('time-ago');
 }
 
 export const handler: Handlers<HomePageData, State> = {
@@ -33,9 +34,9 @@ export const handler: Handlers<HomePageData, State> = {
     const pageNum = calcPageNum(url);
     const timeAgo = calcTimeAgoFilter(url);
     let allItems: Item[];
-    if (timeAgo === "week" || timeAgo === null) {
+    if (timeAgo === 'week' || timeAgo === null) {
       allItems = await getItemsSince(WEEK);
-    } else if (timeAgo === "month") {
+    } else if (timeAgo === 'month') {
       allItems = await getItemsSince(30 * DAY);
     } else {
       allItems = await getAllItems();
@@ -45,12 +46,9 @@ export const handler: Handlers<HomePageData, State> = {
       .toSorted(compareScore)
       .slice((pageNum - 1) * PAGE_LENGTH, pageNum * PAGE_LENGTH);
 
-    const itemsUsers = await getManyUsers(items.map((item) => item.userId));
+    const itemsUsers = await getManyUsers(items.map(item => item.userId));
 
-    const areVoted = await getAreVotedBySessionId(
-      items,
-      ctx.state.sessionId,
-    );
+    const areVoted = await getAreVotedBySessionId(items, ctx.state.sessionId);
     const lastPage = calcLastPage(allItems.length, PAGE_LENGTH);
 
     return ctx.render({ ...ctx.state, items, itemsUsers, areVoted, lastPage });
@@ -59,33 +57,43 @@ export const handler: Handlers<HomePageData, State> = {
 
 function TimeSelector() {
   return (
-    <div class="flex justify-center my-4 gap-2">
+    <div class='flex justify-center my-4 gap-2'>
       {/* These links do not preserve current URL queries. E.g. if ?page=2, that'll be removed once one of these links is clicked */}
-      <a class={INPUT_STYLES} href="/?time-ago=week">Last Week</a>
-      <a class={INPUT_STYLES} href="/?time-ago=month">Last Month</a>
-      <a class={INPUT_STYLES} href="/?time-ago=all">All time</a>
+      <a class={INPUT_STYLES} href='/?time-ago=week'>
+        Last Week
+      </a>
+      <a class={INPUT_STYLES} href='/?time-ago=month'>
+        Last Month
+      </a>
+      <a class={INPUT_STYLES} href='/?time-ago=all'>
+        All time
+      </a>
     </div>
   );
 }
 
 export default function HomePage(props: PageProps<HomePageData>) {
   return (
-    <main class="flex-1 p-4">
-      <TimeSelector />
-      {props.data.items.map((item, index) => (
-        <ItemSummary
-          item={item}
-          isVoted={props.data.areVoted[index]}
-          user={props.data.itemsUsers[index]}
-        />
-      ))}
-      {props.data.lastPage > 1 && (
-        <PageSelector
-          currentPage={calcPageNum(props.url)}
-          lastPage={props.data.lastPage}
-          timeSelector={calcTimeAgoFilter(props.url) ?? undefined}
-        />
-      )}
-    </main>
+    <>
+      <Head href={props.url.href} />
+      <Hero />
+      <div class={`${SITE_WIDTH_STYLES} flex-1 px-4`}>
+        <TimeSelector />
+        {props.data.items.map((item, index) => (
+          <ItemSummary
+            item={item}
+            isVoted={props.data.areVoted[index]}
+            user={props.data.itemsUsers[index]}
+          />
+        ))}
+        {props.data.lastPage > 1 && (
+          <PageSelector
+            currentPage={calcPageNum(props.url)}
+            lastPage={props.data.lastPage}
+            timeSelector={calcTimeAgoFilter(props.url) ?? undefined}
+          />
+        )}
+      </div>
+    </>
   );
 }
