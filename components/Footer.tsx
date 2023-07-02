@@ -1,46 +1,68 @@
-// Copyright 2023 the Deno authors. All rights reserved. MIT license.
-import {
-  LINK_STYLES,
-  NAV_STYLES,
-  SITE_BAR_STYLES,
-  SITE_NAME,
-} from "@/utils/constants.ts";
-import { Discord, GitHub } from "./Icons.tsx";
+import type { JSX, ComponentChild } from 'preact';
+import { SITE_WIDTH_STYLES } from '@/utils/constants.ts';
+import Logo from './Logo.tsx';
 
-export default function Footer() {
+interface NavProps extends JSX.HTMLAttributes<HTMLElement> {
+  active?: string;
+  items: (JSX.HTMLAttributes<HTMLAnchorElement> & { inner: ComponentChild })[];
+}
+
+function Nav(props: NavProps) {
+  return (
+    <nav>
+      <ul
+        class={`flex gap-x-8 gap-y-2 items-center justify-between h-full ${
+          props.class ?? ''
+        }`}
+      >
+        {props.items.map(item => (
+          <li>
+            <a class='text-white' href={item.href}>
+              {item.inner}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
+
+function Footer(props: JSX.HTMLAttributes<HTMLElement>) {
+  const footerNavItems = [
+    {
+      inner: 'Docs',
+      href: '/docs',
+    },
+    {
+      href: '/rapidapi',
+      inner: 'Rapidapi',
+    },
+    {
+      href: 'https://github.com/adriancova/veridata-saas',
+      inner: 'Source code',
+    },
+    {
+      href: 'https://fresh.deno.dev',
+      inner: (
+        <img
+          width='197'
+          height='37'
+          src='https://fresh.deno.dev/fresh-badge.svg'
+          alt='Made with Fresh'
+        />
+      ),
+    },
+  ];
   return (
     <footer
-      class={`${SITE_BAR_STYLES} flex-col md:flex-row mt-8`}
+      {...props}
+      class={`flex bg-blue-600 text-white flex-col md:flex-row p-4 justify-between gap-y-4 ${SITE_WIDTH_STYLES} ${
+        props.class ?? ''
+      } `}
     >
-      <p>© {SITE_NAME}</p>
-      <nav class={NAV_STYLES}>
-        <a href="/stats" class={LINK_STYLES}>Stats</a>
-        <a href="/blog" class={LINK_STYLES}>Blog</a>
-        <a
-          href="https://discord.gg/deno"
-          target="_blank"
-          aria-label="Deno SaaSKit on Discord"
-          class={LINK_STYLES}
-        >
-          <Discord class="h-6 w-6" />
-        </a>
-        <a
-          href="https://github.com/denoland/saaskit"
-          target="_blank"
-          aria-label="Deno SaaSKit repo on GitHub"
-          class={LINK_STYLES}
-        >
-          <GitHub class="h-6 w-6" />
-        </a>
-        <a href="https://fresh.deno.dev">
-          <img
-            width="197"
-            height="37"
-            src="https://fresh.deno.dev/fresh-badge.svg"
-            alt="Made with Fresh"
-          />
-        </a>
-      </nav>
+      <Logo />
+      <Nav items={footerNavItems} />
     </footer>
   );
 }
+export default Footer;
