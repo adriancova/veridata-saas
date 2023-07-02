@@ -44,7 +44,6 @@ export default function Meta({
       />
       <link rel='stylesheet' href='css/bootstrap.min.css' />
       <link rel='stylesheet' href='css/animate.css' />
-      <link rel='stylesheet' href='css/lineicons.css' />
       <link rel='stylesheet' href='css/ud-styles.css' />
       {imageUrl && <meta name='twitter:image' content={imageUrl} />}
       <script src='js/bootstrap.bundle.min.js'></script>
