@@ -17,6 +17,9 @@ import {
 import { DAY, WEEK } from 'std/datetime/constants.ts';
 import Hero from '../components/Hero.tsx';
 import About from '../components/About.tsx';
+import Pricing from '../components/Pricing.tsx';
+import FAQ from '../components/FAQ.tsx';
+import Contact from '../components/Contact.tsx';
 
 interface HomePageData extends State {
   itemsUsers: User[];
@@ -79,23 +82,9 @@ export default function HomePage(props: PageProps<HomePageData>) {
       <Head href={props.url.href} />
       <Hero />
       <About />
-      <div class={`${SITE_WIDTH_STYLES} flex-1 px-4`}>
-        <TimeSelector />
-        {props.data.items.map((item, index) => (
-          <ItemSummary
-            item={item}
-            isVoted={props.data.areVoted[index]}
-            user={props.data.itemsUsers[index]}
-          />
-        ))}
-        {props.data.lastPage > 1 && (
-          <PageSelector
-            currentPage={calcPageNum(props.url)}
-            lastPage={props.data.lastPage}
-            timeSelector={calcTimeAgoFilter(props.url) ?? undefined}
-          />
-        )}
-      </div>
+      <FAQ />
+      <Pricing />
+      <Contact />
     </>
   );
 }
