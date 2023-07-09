@@ -4,7 +4,7 @@ const FAQ = () => {
   return (
     <section id='faq' class='ud-faq'>
       <div class='shape'>
-        <img src='assets/images/faq/shape.svg' alt='shape' />
+        <img src='images/faq/shape.svg' alt='shape' />
       </div>
       <div class='container'>
         <div class='row'>
@@ -23,7 +23,7 @@ const FAQ = () => {
         <div class='row'>
           <div class='col-lg-6'>
             <div class='ud-single-faq wow fadeInUp' data-wow-delay='.1s'>
-              <div class='accordion'>
+              <div class='accordion z-10'>
                 <button
                   class='ud-faq-btn collapsed'
                   data-bs-toggle='collapse'
@@ -35,7 +35,7 @@ const FAQ = () => {
                   <span>How to use UIdeck?</span>
                 </button>
                 <div id='collapseOne' class='accordion-collapse collapse'>
-                  <div class='ud-faq-body'>
+                  <div class='ud-faq-body z-50'>
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
                     standard dummy text ever since the 1500s, when an unknown

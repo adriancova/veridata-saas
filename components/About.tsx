@@ -15,41 +15,42 @@ const About = () => {
               <span>Veridata</span>
               <h2>Acerca de</h2>
               <p>
-                There are many variations of passages of Lorem Ipsum available
-                but the majority have suffered alteration in some form.
+                El objetivo de veridata es ofrecer servicios api de primera para
+                latinoamerica, cumpliendo con las 3B: bueno, bonito y barato.
               </p>
             </div>
           </div>
         </div>
         <div class='row'>
           <div class='col-xl-3 col-lg-3 col-sm-6'>
-            <div class='ud-single-feature wow fadeInUp' data-wow-delay='.1s'>
+            <div class='ud-single-feature wow fadeInUp' data-wow-delay='.25s'>
               <div class='ud-feature-icon'>
-                <IconGift class='w-8 h-8' />
+                <IconLayersSubtract class='w-8 h-8' />
               </div>
               <div class='ud-feature-content'>
-                <h3 class='ud-feature-title'>Free and Open-Source</h3>
+                <h3 class='ud-feature-title'>Bueno, Bonito y Barato</h3>
                 <p class='ud-feature-desc'>
-                  Lorem Ipsum is simply dummy text of the printing and industry.
+                  Contamos con los precios mas competitivos del mercado, alta
+                  disponibilidad en el servicio e integraciones faciles
+                  siguiendo el estandar OpenAPI.
                 </p>
-                <a href='javascript:void(0)' class='ud-feature-link'>
-                  Learn More
-                </a>
               </div>
             </div>
           </div>
           <div class='col-xl-3 col-lg-3 col-sm-6'>
             <div class='ud-single-feature wow fadeInUp' data-wow-delay='.15s'>
               <div class='ud-feature-icon'>
-                <IconArrowsMove class='w-8 h-8' />
+                <IconSourceCode class='w-8 h-8' />
               </div>
               <div class='ud-feature-content'>
-                <h3 class='ud-feature-title'>Multipurpose Template</h3>
+                <h3 class='ud-feature-title'>Calidad y confianza</h3>
                 <p class='ud-feature-desc'>
-                  Lorem Ipsum is simply dummy text of the printing and industry.
+                  Veridata hace uso de tecnologias edge para garantizar una alta
+                  disponibilidad y tiempos de respuesta minimos sin importar
+                  desde donde se haga la llamada en el mundo.
                 </p>
-                <a href='javascript:void(0)' class='ud-feature-link'>
-                  Learn More
+                <a href='/account' class='ud-feature-link'>
+                  Pruebalo tu mismo
                 </a>
               </div>
             </div>
@@ -60,28 +61,39 @@ const About = () => {
                 <IconSourceCode class='w-8 h-8' />
               </div>
               <div class='ud-feature-content'>
-                <h3 class='ud-feature-title'>High-quality Design</h3>
+                <h3 class='ud-feature-title'>
+                  Planes a la medida, cobros seguros
+                </h3>
                 <p class='ud-feature-desc'>
-                  Lorem Ipsum is simply dummy text of the printing and industry.
+                  Tenemos una serie de planes pensados para cubrir las
+                  necesidades de todo tipo de clientes. Sientete con la
+                  confianza de que veridata no te pedira ni almacenara nunca tu
+                  informacion de pago, ya que usamos stripe para la
+                  administracion de suscripciones
                 </p>
-                <a href='javascript:void(0)' class='ud-feature-link'>
-                  Learn More
-                </a>
+                <p>
+                  O si lo prefieres tambien se encuentra nuestra api en
+                  <a href='/rapidapi' class='ud-feature-link'>
+                    RapidApi
+                  </a>
+                </p>
               </div>
             </div>
           </div>
           <div class='col-xl-3 col-lg-3 col-sm-6'>
-            <div class='ud-single-feature wow fadeInUp' data-wow-delay='.25s'>
+            <div class='ud-single-feature wow fadeInUp' data-wow-delay='.1s'>
               <div class='ud-feature-icon'>
-                <IconLayersSubtract class='w-8 h-8' />
+                <IconGift class='w-8 h-8' />
               </div>
               <div class='ud-feature-content'>
-                <h3 class='ud-feature-title'>All Essential Elements</h3>
+                <h3 class='ud-feature-title'>Pruebalo gratis</h3>
                 <p class='ud-feature-desc'>
-                  Lorem Ipsum is simply dummy text of the printing and industry.
+                  Sin necesidad de pagar una suscripcion puedes solo hacer tu
+                  cuenta y obtendras un apiKey con un numero pequeño de
+                  validaciones para que pruebes los servicios que te interesan.
                 </p>
-                <a href='javascript:void(0)' class='ud-feature-link'>
-                  Learn More
+                <a href='/account' class='ud-feature-link'>
+                  Crear una cuenta
                 </a>
               </div>
             </div>
