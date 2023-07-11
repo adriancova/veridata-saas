@@ -1,15 +1,17 @@
-import Logo from './Logo.tsx';
+import Logo from '@/components/Logo.tsx';
+import { useSignal } from '@preact/signals';
 
 interface NavItemProps {
   label: string;
   href: string;
   class?: string;
+  onClick?: () => void;
 }
 
 const NavItem = (props: NavItemProps) => {
   return (
     <li class={`nav-item ${props.class ?? ''}`}>
-      <a class='ud-menu-scroll' href={props.href}>
+      <a class='ud-menu-scroll' href={props.href} onClick={props.onClick}>
         {props.label}
       </a>
     </li>
@@ -40,6 +42,22 @@ const Navbar = (props: NavBarProps) => {
       label: 'Contacto',
     },
   ];
+
+  const isCollapsed = useSignal(true);
+  const isActive = useSignal(false);
+
+  const toggleMenu = () => {
+    console.log('toggle', isCollapsed.value, isActive.value);
+    isCollapsed.value = !isCollapsed.value;
+    isActive.value = !isActive.value;
+  };
+
+  const toggleOffMenu = () => {
+    console.log('ayayaya');
+    isCollapsed.value = true;
+    isActive.value = false;
+  };
+
   return (
     <header class='ud-header'>
       <div class='container'>
@@ -47,19 +65,21 @@ const Navbar = (props: NavBarProps) => {
           <div class='col-lg-12'>
             <nav class='navbar navbar-expand-lg'>
               <Logo />
-              <button class='navbar-toggler'>
+              <div class={`navbar-collapse ${isCollapsed.value ? '' : 'show'}`}>
+                <ul id='nav' class='navbar-nav mx-auto'>
+                  {headerNavItems.map(i => (
+                    <NavItem {...i} onClick={toggleOffMenu} />
+                  ))}
+                </ul>
+              </div>
+              <button
+                class={`navbar-toggler ${isActive.value ? 'active' : ''}`}
+                onClick={toggleMenu}
+              >
                 <span class='toggler-icon'> </span>
                 <span class='toggler-icon'> </span>
                 <span class='toggler-icon'> </span>
               </button>
-
-              <div class='navbar-collapse'>
-                <ul id='nav' class='navbar-nav mx-auto'>
-                  {headerNavItems.map(i => (
-                    <NavItem {...i} />
-                  ))}
-                </ul>
-              </div>
 
               {props.session ? (
                 <div>session - {props.session}</div>
