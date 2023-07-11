@@ -11,7 +11,7 @@ const Hero = () => {
               <p class='ud-hero-desc'>
                 Veridata ofrece una serie de APIs para validacion de datos de
                 identidad mas comunes en lationamerica, por ejemplo INE (MEX) o
-                Registraudria (COL).
+                Registraduria (COL).
               </p>
               <ul class='ud-hero-buttons'>
                 <li>
