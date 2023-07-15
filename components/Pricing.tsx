@@ -18,11 +18,15 @@ const PricingCard = (props: PricingCardProps) => {
           <h4>$ {props.price}/mes (mxn)</h4>
         </div>
         <div class='ud-pricing-body'>
-          <ul>
-            <li>Incluye un total de {props.calls} api requests</li>
-            <li>Costo por request de ${props.calls / props.price} centavos</li>
-            <li>Puedes cancelar en cualquier momento</li>
-          </ul>
+          <u>
+            <li class='text-mygray border-none'>
+              Incluye un total de {props.calls} api requests
+            </li>
+            <li class='text-mygray'>
+              Costo por request de ${props.calls / props.price} centavos
+            </li>
+            <li class='text-mygray'>Puedes cancelar en cualquier momento</li>
+          </u>
         </div>
         <div class='ud-pricing-footer'>
           <a href='/account/manage' class='ud-main-btn ud-border-btn'>
@@ -53,11 +57,11 @@ const Pricing = () => {
           <div class='col-lg-12'>
             <div class='ud-section-title mx-auto text-center'>
               <span>Precios</span>
-              <h2>Nuestras suscripciones</h2>
+              <h2>Suscripciones</h2>
               <p>
                 Ofrecemos suscripciones a la medida administradas mediante
                 stripe para mayor facilidad y tranquilidad. Veridata no almacena
-                absolutamente ninguna informacion de pago.
+                tu informacion de pago.
               </p>
             </div>
           </div>
@@ -69,8 +73,8 @@ const Pricing = () => {
           ))}
         </div>
         <div class='ud-section-title mx-auto text-center'>
-          <span>RapidApi</span>
-          <h2>Suscripcion mediante RapidApi</h2>
+          <span>Alternativas</span>
+          <h2>RapidApi</h2>
           <p>
             Si lo prefieres tenemos publicada el api en rapidapi aunque con un
             costo mayor en los planes, pero la plataforma nos permite ofrecer un
@@ -81,8 +85,7 @@ const Pricing = () => {
           <a href='/rapidapi'>Ver los planes en RapidApi</a>
         </div>
         <div class='ud-section-title mx-auto text-center'>
-          <span>Enterprise</span>
-          <h2>Suscripciones a la medida</h2>
+          <h2>Enterprise</h2>
           <p>
             Si requieres de un numero de llamadas mayor a las disponibles en el
             Business plan, porfavor manda un correo a contacto@veridata.lat para

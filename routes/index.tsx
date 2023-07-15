@@ -3,8 +3,6 @@ import type { Handlers, PageProps } from '$fresh/server.ts';
 import { INPUT_STYLES } from '@/utils/constants.ts';
 import { calcLastPage, calcPageNum, PAGE_LENGTH } from '@/utils/pagination.ts';
 import type { State } from './_middleware.ts';
-import ItemSummary from '@/components/ItemSummary.tsx';
-import PageSelector from '@/components/PageSelector.tsx';
 import {
   compareScore,
   getAllItems,
@@ -20,6 +18,8 @@ import About from '../components/About.tsx';
 import Pricing from '../components/Pricing.tsx';
 import FAQ from '../components/FAQ.tsx';
 import Contact from '../components/Contact.tsx';
+import Meta from '../components/Meta.tsx';
+import Navbar from '../islands/NavBar.tsx';
 
 interface HomePageData extends State {
   itemsUsers: User[];
@@ -79,7 +79,9 @@ function TimeSelector() {
 export default function HomePage(props: PageProps<HomePageData>) {
   return (
     <>
-      <Head href={props.url.href} />
+      <Meta href={props.url.href} />
+
+      <Navbar session={props.session} />
       <Hero />
       <About />
       <FAQ />
