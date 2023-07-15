@@ -1,9 +1,9 @@
 // Copyright 2023 the Deno authors. All rights reserved. MIT license.
-import { Options } from "$fresh/plugins/twindv1.ts";
-import { defineConfig, Preset } from "@twind/core";
+import { Options } from '$fresh/plugins/twindv1.ts';
+import { defineConfig, Preset } from '@twind/core';
 // twind preset
-import presetTailWind from "twind-preset-tailwind/base";
-import * as colors from "twind-preset-tailwind/colors";
+import presetTailWind from 'twind-preset-tailwind/base';
+import * as colors from 'twind-preset-tailwind/colors';
 
 /** @todo Remove the need for type-assertions */
 export default {
@@ -21,8 +21,9 @@ export default {
           // This line is required. Otherwise, if removed, the values of other colors with be removed.
           ...colors,
           // Modify primary and secondary colors according to your color-scheme
-          primary: "#be185d",
-          secondary: "#4338ca",
+          primary: '#be185d',
+          secondary: '#4338ca',
+          mygray: '#637381',
         },
         // deno-lint-ignore no-explicit-any
       }) as Preset<any>,
