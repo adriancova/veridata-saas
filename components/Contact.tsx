@@ -1,5 +1,5 @@
 import IconMailbox from '@tabler_icons/tsx/mailbox.tsx';
-import IconFileDollar from '@tabler_icons/tsx/file-dollar.tsx';
+import Icon24Hours from '@tabler_icons/tsx/24-hours.tsx';
 
 const Contact = () => {
   return (
@@ -9,23 +9,22 @@ const Contact = () => {
           <div class='col-xl-8 col-lg-7'>
             <div class='ud-contact-content-wrapper'>
               <div class='ud-contact-title'>
-                <span>CONTACT US</span>
+                <span>Contacto</span>
                 <h2>
-                  Let’s talk about <br />
-                  Love to hear from you!
+                  Hablemos! <br />
+                  contacto@veridata.lat
                 </h2>
               </div>
               <div class='ud-contact-info-wrapper'>
                 <div class='ud-single-info'>
                   <div class='ud-info-icon'>
-                    <IconFileDollar class='w-8 h-8' />
+                    <Icon24Hours class='w-8 h-8' />
                   </div>
                   <div class='ud-info-meta'>
-                    <h5>Issues with payments?</h5>
+                    <h5>Dudas o inquietudes?</h5>
                     <p>
-                      Payments are processed by stripe or by rapidapi if you
-                      prefer that option, please raise a ticket if you're having
-                      an issue
+                      Podemos ayudarte a resolver tus dudas mediante nuestro
+                      email.
                     </p>
                   </div>
                 </div>
@@ -35,8 +34,7 @@ const Contact = () => {
                   </div>
                   <div class='ud-info-meta'>
                     <h5>Puedes mandar un correo a</h5>
-                    <p>contact@veridata.lat</p>
-                    <p>admin@veridata.lat</p>
+                    <p>contacto@veridata.lat</p>
                   </div>
                 </div>
               </div>
@@ -47,18 +45,18 @@ const Contact = () => {
               class='ud-contact-form-wrapper wow fadeInUp'
               data-wow-delay='.2s'
             >
-              <h3 class='ud-contact-form-title'>Send us a Message</h3>
+              <h3 class='ud-contact-form-title'>Deja un mensaje</h3>
               <form class='ud-contact-form'>
                 <div class='ud-form-group'>
-                  <label for='fullName'>Full Name*</label>
+                  <label for='fullName'>Nombre*</label>
                   <input
                     type='text'
                     name='fullName'
-                    placeholder='Adam Gelius'
+                    placeholder='Juan Hernandez'
                   />
                 </div>
                 <div class='ud-form-group'>
-                  <label for='email'>Email*</label>
+                  <label for='email'>Correo*</label>
                   <input
                     type='email'
                     name='email'
@@ -66,24 +64,24 @@ const Contact = () => {
                   />
                 </div>
                 <div class='ud-form-group'>
-                  <label for='phone'>Phone*</label>
+                  <label for='phone'>Telefono*</label>
                   <input
                     type='text'
                     name='phone'
-                    placeholder='+885 1254 5211 552'
+                    placeholder='+52 5554 5211 552'
                   />
                 </div>
                 <div class='ud-form-group'>
-                  <label for='message'>Message*</label>
+                  <label for='message'>Mensaje*</label>
                   <textarea
                     name='message'
-                    rows={1}
-                    placeholder='type your message here'
+                    rows={2}
+                    placeholder='Necesito ayuda con ...'
                   ></textarea>
                 </div>
                 <div class='ud-form-group mb-0'>
                   <button type='submit' class='ud-main-btn'>
-                    Send Message
+                    Enviar mensaje
                   </button>
                 </div>
               </form>
