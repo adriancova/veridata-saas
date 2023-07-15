@@ -18,9 +18,9 @@ const PricingCard = (props: PricingCardProps) => {
           <h4>$ {props.price}/mes (mxn)</h4>
         </div>
         <div class='ud-pricing-body'>
-          <u>
+          <u class='no-underline'>
             <li class='text-mygray border-none'>
-              Incluye un total de {props.calls} api requests
+              Incluye un total de <strong>{props.calls}</strong> api requests
             </li>
             <li class='text-mygray'>
               Costo por request de ${props.calls / props.price} centavos

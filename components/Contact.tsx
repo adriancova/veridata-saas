@@ -13,7 +13,6 @@ const Contact = () => {
                 <h2>
                   Hablemos! <br />
                 </h2>
-                <h4>contacto@veridata.lat</h4>
               </div>
               <div class='ud-contact-info-wrapper'>
                 <div class='ud-single-info'>
@@ -33,8 +32,13 @@ const Contact = () => {
                     <IconMailbox class='w-8 h-8' />
                   </div>
                   <div class='ud-info-meta'>
-                    <h5>Puedes mandar un correo a</h5>
-                    <p>contacto@veridata.lat</p>
+                    <h5>Manda un correo a</h5>
+                    <a
+                      href='mailto:contacto@veridata.lat?subject=Duda%20Veridata'
+                      target='_blank'
+                    >
+                      contacto@veridata.lat
+                    </a>
                   </div>
                 </div>
               </div>

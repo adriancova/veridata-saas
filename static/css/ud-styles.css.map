@@ -13,7 +13,6 @@
     "../scss/_pricing.scss",
     "../scss/_faq.scss",
     "../scss/_contact.scss",
-    "../scss/_footer.scss",
     "../scss/_login.scss",
     "../scss/_404.scss"
   ],

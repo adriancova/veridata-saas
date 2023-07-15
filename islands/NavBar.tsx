@@ -47,13 +47,11 @@ const Navbar = (props: NavBarProps) => {
   const isActive = useSignal(false);
 
   const toggleMenu = () => {
-    console.log('toggle', isCollapsed.value, isActive.value);
     isCollapsed.value = !isCollapsed.value;
     isActive.value = !isActive.value;
   };
 
   const toggleOffMenu = () => {
-    console.log('ayayaya');
     isCollapsed.value = true;
     isActive.value = false;
   };
