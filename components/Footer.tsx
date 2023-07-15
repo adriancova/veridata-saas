@@ -1,33 +1,7 @@
-import type { JSX, ComponentChild } from 'preact';
-import { SITE_WIDTH_STYLES } from '@/utils/constants.ts';
+import { NAV_STYLES, SITE_BAR_STYLES } from '@/utils/constants.ts';
 import Logo from './Logo.tsx';
 
-interface NavProps extends JSX.HTMLAttributes<HTMLElement> {
-  active?: string;
-  items: (JSX.HTMLAttributes<HTMLAnchorElement> & { inner: ComponentChild })[];
-}
-
-function Nav(props: NavProps) {
-  return (
-    <nav>
-      <ul
-        class={`flex gap-x-8 gap-y-2 items-center justify-between h-full ${
-          props.class ?? ''
-        }`}
-      >
-        {props.items.map(item => (
-          <li>
-            <a class='text-white' href={item.href}>
-              {item.inner}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
-  );
-}
-
-function Footer(props: JSX.HTMLAttributes<HTMLElement>) {
+function Footer() {
   const footerNavItems = [
     {
       inner: 'Docs',
@@ -41,27 +15,30 @@ function Footer(props: JSX.HTMLAttributes<HTMLElement>) {
       href: 'https://github.com/adriancova/veridata-saas',
       inner: 'Source code',
     },
-    {
-      href: 'https://fresh.deno.dev',
-      inner: (
-        <img
-          width='197'
-          height='37'
-          src='https://fresh.deno.dev/fresh-badge.svg'
-          alt='Made with Fresh'
-        />
-      ),
-    },
   ];
   return (
     <footer
-      {...props}
-      class={`flex bg-blue-600 text-white flex-col md:flex-row p-4 justify-between gap-y-4 ${SITE_WIDTH_STYLES} ${
-        props.class ?? ''
-      } `}
+      class={`${SITE_BAR_STYLES} flex-col sm:flex-row mt-8 flex bg-blue-600 text-white`}
     >
       <Logo />
-      <Nav items={footerNavItems} />
+
+      <div class='flex flex-col sm:flex-row items-center justify-center'>
+        <nav class={NAV_STYLES}>
+          {footerNavItems.map(i => (
+            <a href={i.href} class='text-white'>
+              {i.inner}
+            </a>
+          ))}
+        </nav>
+        <a href='https://fresh.deno.dev' class='sm:ml-4'>
+          <img
+            width='197'
+            height='37'
+            src='https://fresh.deno.dev/fresh-badge.svg'
+            alt='Made with Fresh'
+          />
+        </a>
+      </div>
     </footer>
   );
 }
