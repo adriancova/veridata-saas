@@ -12,8 +12,8 @@ const Contact = () => {
                 <span>Contacto</span>
                 <h2>
                   Hablemos! <br />
-                  contacto@veridata.lat
                 </h2>
+                <h4>contacto@veridata.lat</h4>
               </div>
               <div class='ud-contact-info-wrapper'>
                 <div class='ud-single-info'>

@@ -12,8 +12,8 @@ function Footer() {
       inner: 'Rapidapi',
     },
     {
-      href: 'https://github.com/adriancova/veridata-saas',
-      inner: 'Source code',
+      href: '/#contact',
+      inner: 'Contacto',
     },
   ];
   return (
