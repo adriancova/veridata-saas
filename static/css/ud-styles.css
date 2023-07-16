@@ -161,20 +161,6 @@ p {
   background: var(--heading-color);
 }
 
-@media (max-width: 767px) {
-  .container {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .container {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
 .back-to-top {
   width: 40px;
   height: 40px;
@@ -283,8 +269,8 @@ p {
   top: -7px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px),
-  (max-width: 767px) {
+@media only screen and (min-width: 639px) and (max-width: 767px),
+  (max-width: 640px) {
   .navbar-collapse {
     position: absolute;
     top: 100%;
@@ -339,8 +325,8 @@ p {
   position: relative;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px),
-  (max-width: 767px) {
+@media only screen and (min-width: 640px) and (max-width: 767px),
+  (max-width: 639px) {
   .navbar-nav .nav-item > a {
     display: block;
     padding: 8px 0;
@@ -378,7 +364,7 @@ p {
   transition: all 0.3s ease-out 0s;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px),
+@media only screen and (min-width: 768px) and (max-width: 1020px),
   (max-width: 767px) {
   .navbar-nav .nav-item .ud-submenu {
     position: static;
@@ -449,17 +435,6 @@ p {
   (max-width: 767px) {
   .navbar-nav .nav-item.nav-item-has-children > a::after {
     right: 5px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px),
-  (max-width: 767px) {
-  .navbar-btn {
-    position: absolute;
-    top: 50%;
-    right: 50px;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
   }
 }
 
@@ -632,7 +607,6 @@ p {
 
 .ud-hero-brands-wrapper {
   text-align: center;
-  margin-bottom: 40px;
 }
 
 .ud-hero-brands-wrapper img {

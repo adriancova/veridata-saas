@@ -58,39 +58,42 @@ const Navbar = (props: NavBarProps) => {
 
   return (
     <header class='ud-header'>
-      <div class='container'>
-        <div class='row'>
-          <div class='col-lg-12'>
-            <nav class='navbar navbar-expand-lg'>
-              <Logo />
-              <div class={`navbar-collapse ${isCollapsed.value ? '' : 'show'}`}>
-                <ul id='nav' class='navbar-nav mx-auto'>
-                  {headerNavItems.map(i => (
-                    <NavItem {...i} onClick={toggleOffMenu} />
-                  ))}
-                </ul>
-              </div>
-              <button
-                class={`navbar-toggler ${isActive.value ? 'active' : ''}`}
-                onClick={toggleMenu}
-              >
-                <span class='toggler-icon'> </span>
-                <span class='toggler-icon'> </span>
-                <span class='toggler-icon'> </span>
-              </button>
-
-              {props.session ? (
-                <div>session - {props.session}</div>
-              ) : (
-                <div class='navbar-btn d-none d-sm-inline-block'>
-                  <a class='ud-main-btn ud-white-btn' href='/account'>
-                    Ingresar
-                  </a>
-                </div>
-              )}
-            </nav>
+      <div class='container mx-auto'>
+        <nav class='flex justify-space-between sm:justify-start items-center flex-row flex-wrap relative'>
+          <Logo />
+          <div
+            class={`navbar-collapse flex grow hidden sm:flex ${
+              isCollapsed.value ? '' : 'show'
+            }`}
+          >
+            <ul id='nav' class='flex flex-col md:flex-row navbar-nav mx-auto'>
+              {headerNavItems.map(i => (
+                <NavItem {...i} onClick={toggleOffMenu} />
+              ))}
+            </ul>
           </div>
-        </div>
+
+          {props.session ? (
+            <div>session - {props.session}</div>
+          ) : (
+            <div class='navbar-btn d-none d-sm-inline-block hidden sm:block ml-auto'>
+              <a class='ud-main-btn ud-white-btn' href='/account'>
+                Ingresar
+              </a>
+            </div>
+          )}
+
+          <button
+            class={`navbar-toggler ml-4 md:hidden ${
+              isActive.value ? 'active' : ''
+            }`}
+            onClick={toggleMenu}
+          >
+            <span class='toggler-icon'> </span>
+            <span class='toggler-icon'> </span>
+            <span class='toggler-icon'> </span>
+          </button>
+        </nav>
       </div>
     </header>
   );

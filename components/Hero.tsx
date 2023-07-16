@@ -1,17 +1,19 @@
+import Brands from '@/islands/Brands.tsx';
+
 const Hero = () => {
   return (
     <section class='ud-hero' id='home'>
-      <div class='container'>
+      <div class='max-w-6xl container mx-auto '>
         <div class='row'>
           <div class='col-lg-12'>
             <div class='ud-hero-content wow fadeInUp' data-wow-delay='.2s'>
               <h1 class='ud-hero-title'>
-                Validacion de datos confiable, rapida y economica
+                Validación de datos confiable, rápida y accesible
               </h1>
               <p class='ud-hero-desc'>
-                Veridata ofrece una serie de APIs para validacion de datos de
-                identidad mas comunes en lationamerica, por ejemplo INE (MEX) o
-                Registraduria (COL).
+                Veridata ofrece una serie de APIs para validación de datos de
+                identidad mas cómunes en lationamérica, por ejemplo INE en
+                México o la Registraduria de Colombia.
               </p>
               <ul class='ud-hero-buttons'>
                 <li>
@@ -21,7 +23,7 @@ const Hero = () => {
                     target='_blank'
                     class='ud-main-btn ud-white-btn'
                   >
-                    Pruebalo ahora
+                    Pruébalo ahora
                   </a>
                 </li>
                 <li>
@@ -31,17 +33,13 @@ const Hero = () => {
                     target='_blank'
                     class='ud-main-btn ud-link-btn'
                   >
-                    Documentacion
+                    Documentación
                   </a>
                 </li>
               </ul>
             </div>
-            <div
-              class='ud-hero-brands-wrapper wow fadeInUp'
-              data-wow-delay='.3s'
-            >
-              <img class='mx-auto' src='/images/hero/brand.svg' alt='brand' />
-            </div>
+
+            <Brands />
           </div>
         </div>
       </div>

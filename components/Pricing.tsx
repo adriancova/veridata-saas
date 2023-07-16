@@ -52,7 +52,7 @@ const pricing_plans = [
 const Pricing = () => {
   return (
     <section id='pricing' class='ud-pricing'>
-      <div class='container'>
+      <div class='container mx-auto max-w-6xl'>
         <div class='row'>
           <div class='col-lg-12'>
             <div class='ud-section-title mx-auto text-center'>

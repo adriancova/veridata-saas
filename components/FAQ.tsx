@@ -6,7 +6,7 @@ const FAQ = () => {
       <div class='shape'>
         <img src='images/faq/shape.svg' alt='shape' />
       </div>
-      <div class='container'>
+      <div class='container mx-auto max-w-6xl'>
         <div class='row'>
           <div class='col-lg-12'>
             <div class='ud-section-title text-center mx-auto'>

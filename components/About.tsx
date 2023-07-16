@@ -8,7 +8,7 @@ import IconLayersSubtract from 'https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/l
 const About = () => {
   return (
     <section id='about' class='ud-features'>
-      <div class='container'>
+      <div class='container mx-auto max-w-6xl'>
         <div class='row'>
           <div class='col-lg-12'>
             <div class='ud-section-title'>

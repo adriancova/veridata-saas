@@ -73,7 +73,7 @@
 }
 
 .navbar-collapse {
-  @media #{$md, $xs} {
+  @media #{$sm, $xs} {
     position: absolute;
     top: 100%;
     right: 0;
@@ -93,7 +93,7 @@
 }
 
 .navbar-nav {
-  @media #{$md, $xs} {
+  @media #{$sm, $xs} {
     padding: 20px 30px;
   }
 
@@ -195,7 +195,7 @@
         position: relative;
 
         &::after {
-          content: "";
+          content: '';
           box-sizing: border-box;
           position: absolute;
           width: 10px;
@@ -217,13 +217,6 @@
 }
 
 .navbar-btn {
-  @media #{$md, $xs} {
-    position: absolute;
-    top: 50%;
-    right: 50px;
-    @include transform(translateY(-50%));
-  }
-
   .ud-main-btn {
     padding: 8px 16px;
     background: transparent;

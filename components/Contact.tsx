@@ -4,7 +4,7 @@ import Icon24Hours from '@tabler_icons/tsx/24-hours.tsx';
 const Contact = () => {
   return (
     <section id='contact' class='ud-contact'>
-      <div class='container'>
+      <div class='container mx-auto max-w-6xl'>
         <div class='row align-items-center'>
           <div class='col-xl-8 col-lg-7'>
             <div class='ud-contact-content-wrapper'>

@@ -42,11 +42,9 @@ export default function Meta({
         href='https://fonts.googleapis.com/css?family=Hind+Vadodara:400,700|Mukta:500,700'
         rel='stylesheet'
       />
-      <link rel='stylesheet' href='css/bootstrap.min.css' />
       <link rel='stylesheet' href='css/animate.css' />
       <link rel='stylesheet' href='css/ud-styles.css' />
       {imageUrl && <meta name='twitter:image' content={imageUrl} />}
-      <script src='js/bootstrap.bundle.min.js'></script>
       <script src='js/wow.min.js'></script>
       <script src='js/main.js'></script>
     </>
