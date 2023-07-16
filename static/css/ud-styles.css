@@ -290,13 +290,6 @@ p {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px),
-  (max-width: 767px) {
-  .navbar-nav {
-    padding: 20px 30px;
-  }
-}
-
 .navbar-nav .nav-item {
   position: relative;
   padding: 0px 20px;

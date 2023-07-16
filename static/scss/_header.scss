@@ -93,10 +93,6 @@
 }
 
 .navbar-nav {
-  @media #{$sm, $xs} {
-    padding: 20px 30px;
-  }
-
   & .nav-item {
     position: relative;
     padding: 0px 20px;

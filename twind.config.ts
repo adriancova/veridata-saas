@@ -27,6 +27,13 @@ export default {
           '2xl': '1536px',
         },
       },
+      screens: {
+        sm: '580px',
+        md: '768px',
+        lg: '991px',
+        xl: '1280px',
+        '2xl': '1536px',
+      },
     },
     presets: [
       presetAutoPrefix(),
