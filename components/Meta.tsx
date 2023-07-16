@@ -6,35 +6,47 @@ export interface MetaProps {
   imageUrl?: string;
 }
 
-export default function Meta(
-  { title, description, imageUrl, href }: MetaProps,
-) {
+export default function Meta({
+  title,
+  description,
+  imageUrl,
+  href,
+}: MetaProps) {
   return (
     <>
       {/* HTML Meta Tags */}
       <title>{title}</title>
-      <meta name="description" content={description} />
+      <meta name='description' content={description} />
 
       {/* Google / Search Engine Tags */}
-      <meta itemProp="name" content={title} />
-      <meta itemProp="description" content={description} />
-      {imageUrl && <meta itemProp="image" content={imageUrl} />}
+      <meta itemProp='name' content={title} />
+      <meta itemProp='description' content={description} />
+      {imageUrl && <meta itemProp='image' content={imageUrl} />}
 
       {/* Facebook Meta Tags */}
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content={title} />
-      <meta property="og:locale" content="en" />
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:url" content={href} />
-      {imageUrl && <meta property="og:image" content={imageUrl} />}
+      <meta property='og:type' content='website' />
+      <meta property='og:site_name' content={title} />
+      <meta property='og:locale' content='en' />
+      <meta property='og:type' content='website' />
+      <meta property='og:title' content={title} />
+      <meta property='og:description' content={description} />
+      {href && <meta property='og:url' content={href} />}
+      {imageUrl && <meta property='og:image' content={imageUrl} />}
 
       {/* Twitter Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      {imageUrl && <meta name="twitter:image" content={imageUrl} />}
+      <meta name='twitter:card' content='summary_large_image' />
+      <meta name='twitter:title' content={title} />
+      <meta name='twitter:description' content={description} />
+
+      <link
+        href='https://fonts.googleapis.com/css?family=Hind+Vadodara:400,700|Mukta:500,700'
+        rel='stylesheet'
+      />
+      <link rel='stylesheet' href='css/animate.css' />
+      <link rel='stylesheet' href='css/ud-styles.css' />
+      {imageUrl && <meta name='twitter:image' content={imageUrl} />}
+      <script src='js/wow.min.js'></script>
+      <script src='js/main.js'></script>
     </>
   );
 }

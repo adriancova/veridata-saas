@@ -1,20 +1,8 @@
-// Copyright 2023 the Deno authors. All rights reserved. MIT license.
-import { JSX } from "preact";
-import { SITE_NAME } from "@/utils/constants.ts";
-
-export default function Logo(props: JSX.HTMLAttributes<HTMLImageElement>) {
-  const height = props.height ?? 96;
-  const width = height;
-
+export default function Logo() {
   return (
-    <img
-      {...props}
-      height={height}
-      width={width}
-      src="/logo.webp"
-      srcset="/logo-small.webp 96w"
-      alt={`${SITE_NAME} logo`}
-      class={`h-[${height}px] w-[${width}px] mx-auto ${props.class ?? ""}`}
-    />
+    <a class='my-navbar flex flex-row items-center py-4' href='/#'>
+      <img class='h-12 mr-4 md:h-16' src='logo.svg' alt='Logo' />
+      <h1 class='text-white text-lg md:text-2xl'>Veridata</h1>
+    </a>
   );
 }
