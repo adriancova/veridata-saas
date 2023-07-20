@@ -47,17 +47,12 @@ const FAQ = () => {
         <img src='images/faq/shape.svg' alt='shape' />
       </div>
       <div class='container mx-auto max-w-6xl'>
-        <div class='row'>
-          <div class='col-lg-12'>
-            <div class='ud-section-title text-center mx-auto'>
-              <span>FAQ</span>
-              <h2>Preguntas Frecuentes</h2>
-              <p>
-                También puedes mandar un mensaje si tienes alguna duda
-                adicional.
-              </p>
-            </div>
-          </div>
+        <div class='ud-section-title text-center mx-auto'>
+          <span>FAQ</span>
+          <h2>Preguntas Frecuentes</h2>
+          <p>
+            También puedes mandar un mensaje si tienes alguna duda adicional.
+          </p>
         </div>
 
         <div class='grid grid-cols-1 lg:grid-cols-2 gap-4'>

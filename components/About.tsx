@@ -29,7 +29,7 @@ const AboutCard = ({
         </div>
         <div class='ud-feature-content'>
           <h3 class='ud-feature-title'>{title}</h3>
-          <p class='ud-feature-desc w-2/3'>{description}</p>
+          <p class='ud-feature-desc w-4/5'>{description}</p>
           {linkText && linkHref && (
             <a href={linkHref} class='ud-feature-link'>
               {linkText}
