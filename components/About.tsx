@@ -1,6 +1,6 @@
 import IconBrandGithub from '@tabler_icons/tsx/brand-github.tsx';
 import IconGift from '@tabler_icons/tsx/gift.tsx';
-import IconArrowsMove from '@tabler_icons/tsx/arrows-move.tsx';
+import IconDollar from '@tabler_icons/tsx/mood-dollar.tsx';
 import IconSourceCode from 'https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/source-code.tsx';
 import IconLayersSubtract from 'https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/layers-subtract.tsx';
 
@@ -29,10 +29,10 @@ const AboutCard = ({
         </div>
         <div class='ud-feature-content'>
           <h3 class='ud-feature-title'>{title}</h3>
-          <p class='ud-feature-desc w-2/3'>{description}</p>
+          <p class='ud-feature-desc w-4/5'>{description}</p>
           {linkText && linkHref && (
             <a href={linkHref} class='ud-feature-link'>
-              {linkHref}
+              {linkText}
             </a>
           )}
         </div>
@@ -44,34 +44,29 @@ const AboutCard = ({
 const About = () => {
   const aboutData = [
     {
-      title: 'Bueno, Bonito y Barato',
-      description: `Contamos con los precios mas competitivos del mercado, alta
-    disponibilidad en el servicio e integraciones faciles
-    siguiendo el estandar OpenAPI.`,
-      Icon: IconLayersSubtract,
+      title: 'Precios competitivos',
+      description: `Precios competitivos y planes flexibles para tus necesidades.`,
+      Icon: IconDollar,
+
+      linkText: 'Ver precios',
+      linkHref: '/#pricing',
     },
     {
-      title: 'Calidad y confianza',
-      description: `Veridata hace uso de tecnologias edge para garantizar una alta
-      disponibilidad y tiempos de respuesta minimos sin importar
-      desde donde se haga la llamada en el mundo.`,
+      title: 'Calidad asegurada',
+      description: `Servicios optimizados y uso de edge functions con alta disponibilidad y respuestas rápidas globalmente.`,
       Icon: IconSourceCode,
     },
     {
-      title: 'Planes a la medida, cobros seguros',
-      description: `Tenemos una serie de planes pensados para cubrir las
-      necesidades de todo tipo de clientes. Sientete con la
-      confianza de que veridata no te pedira ni almacenara nunca tu
-      informacion de pago, ya que usamos stripe para la
-      administracion de suscripciones`,
-      Icon: IconArrowsMove,
+      title: 'Integración Sencilla',
+      description: `Nuestros servicios están diseñados para una integración sencilla con el estándar OpenAPI.`,
+      Icon: IconLayersSubtract,
     },
     {
-      title: 'Pruebalo gratis',
-      description: `Sin necesidad de pagar una suscripcion puedes solo hacer tu
-      cuenta y obtendras un apiKey con un numero pequeño de
-      validaciones para que pruebes los servicios que te interesan.`,
+      title: 'Comienza Gratis',
+      description: `Regístrate gratis y obtén un apiKey para probar nuestros servicios sin coste inicial.`,
       Icon: IconGift,
+      linkText: 'Ir al dashboard',
+      linkHref: '/account',
     },
   ];
   return (
@@ -89,17 +84,6 @@ const About = () => {
           {aboutData.map(a => {
             return <AboutCard {...a} />;
           })}
-          <div class='w-full sm:w-1/2 lg:w-1/4'>
-            <div class='ud-single-feature wow fadeInUp' data-wow-delay='.1s'>
-              <div class='ud-feature-icon'>
-                <IconGift class='w-8 h-8' />
-              </div>
-              <div class='ud-feature-content'>
-                <h3 class='ud-feature-title'></h3>
-                <p class='ud-feature-desc w-2/3 text-justify'></p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

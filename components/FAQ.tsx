@@ -1,4 +1,44 @@
-import IconChevronDown from '@tabler_icons/tsx/chevron-down.tsx';
+import Question from '@/islands/Question.tsx';
+
+const questions = [
+  {
+    question: '¿Qué tipos de validaciones de datos ofrece Veridata?',
+    answer:
+      'Ofrecemos validaciones de identidad, como CURP e INE en México, Registraduría en Colombia, cédula de identidad en Chile, entre otros. Para ver una lista completa de las validaciones que ofrecemos, puedes hacer clic en este enlace.',
+  },
+  {
+    question: '¿Cómo se integra Veridata con mis sistemas existentes?',
+    answer:
+      'Nuestras APIs siguen el estándar OpenAPI v3.1. Puedes probarlas en nuestro dashboard y copiar el código necesario para utilizarlas en los lenguajes de programación más utilizados, como JavaScript, Java, Python, etc.',
+  },
+  {
+    question:
+      '¿Qué diferencia a Veridata de otros servicios de validación de datos?',
+    answer:
+      '¡La diferencia radica en la calidad y el precio! El código de los servicios de Veridata sigue las mejores prácticas posibles para garantizar los tiempos de respuesta más rápidos y, gracias a ello, podemos ofrecer los precios más competitivos del mercado.',
+  },
+];
+
+const questions2 = [
+  {
+    question: '¿Cómo funciona el plan gratuito de Veridata? ',
+    answer:
+      'Cada uno de los endpoints que ofrecemos tiene un número limitado de validaciones gratuitas para que puedas probar el servicio y comprobar las respuestas. Además, cada servicio ofrece la posibilidad de enviar datos de prueba, los cuales no se suman al total de llamadas y te servirán para probar tu integración.',
+  },
+  {
+    question:
+      '¿Qué medidas de seguridad implementa Veridata para proteger mis datos?',
+    answer:
+      'Veridata no requiere de ningún dato personal para ser utilizado. Además, la información obtenida a través de las llamadas de validación no se almacena en ninguna base de datos.',
+  },
+  {
+    question: 'Tengo un problema/consulta/duda, ¿cómo puedo obtener soporte?',
+    answer:
+      'En nuestro dashboard y en esta página, contamos con un mecanismo para enviar tickets de consulta. Si lo prefieres, puedes enviarnos un correo a contacto@veridata.com y nos pondremos en contacto contigo en un plazo máximo de 48 horas.',
+  },
+];
+
+// 2 colums of questions are needed so that when opening 1 accordion the other one in the same row keeps it's hidden height
 
 const FAQ = () => {
   return (
@@ -7,161 +47,24 @@ const FAQ = () => {
         <img src='images/faq/shape.svg' alt='shape' />
       </div>
       <div class='container mx-auto max-w-6xl'>
-        <div class='row'>
-          <div class='col-lg-12'>
-            <div class='ud-section-title text-center mx-auto'>
-              <span>FAQ</span>
-              <h2>Any Questions? Answered</h2>
-              <p>
-                There are many variations of passages of Lorem Ipsum available
-                but the majority have suffered alteration in some form.
-              </p>
-            </div>
-          </div>
+        <div class='ud-section-title text-center mx-auto'>
+          <span>FAQ</span>
+          <h2>Preguntas Frecuentes</h2>
+          <p>
+            También puedes mandar un mensaje si tienes alguna duda adicional.
+          </p>
         </div>
 
-        <div class='row'>
-          <div class='col-lg-6'>
-            <div class='ud-single-faq wow fadeInUp' data-wow-delay='.1s'>
-              <div class='accordion z-10'>
-                <button
-                  class='ud-faq-btn collapsed'
-                  data-bs-toggle='collapse'
-                  data-bs-target='#collapseOne'
-                >
-                  <span class='icon flex-shrink-0'>
-                    <IconChevronDown class='w-8 h-8' />
-                  </span>
-                  <span>How to use UIdeck?</span>
-                </button>
-                <div id='collapseOne' class='accordion-collapse collapse'>
-                  <div class='ud-faq-body z-50'>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class='ud-single-faq wow fadeInUp' data-wow-delay='.15s'>
-              <div class='accordion'>
-                <button
-                  class='ud-faq-btn collapsed'
-                  data-bs-toggle='collapse'
-                  data-bs-target='#collapseTwo'
-                >
-                  <span class='icon flex-shrink-0'>
-                    <IconChevronDown class='w-8 h-8' />
-                  </span>
-                  <span>How to download icons from Lineicons?</span>
-                </button>
-                <div id='collapseTwo' class='accordion-collapse collapse'>
-                  <div class='ud-faq-body'>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class='ud-single-faq wow fadeInUp' data-wow-delay='.2s'>
-              <div class='accordion'>
-                <button
-                  class='ud-faq-btn collapsed'
-                  data-bs-toggle='collapse'
-                  data-bs-target='#collapseThree'
-                >
-                  <span class='icon flex-shrink-0'>
-                    <IconChevronDown class='w-8 h-8' />
-                  </span>
-                  <span>Is GrayGrids part of UIdeck?</span>
-                </button>
-                <div id='collapseThree' class='accordion-collapse collapse'>
-                  <div class='ud-faq-body'>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+          <div class='flex flex-col'>
+            {questions.map(q => (
+              <Question {...q} />
+            ))}
           </div>
-          <div class='col-lg-6'>
-            <div class='ud-single-faq wow fadeInUp' data-wow-delay='.1s'>
-              <div class='accordion'>
-                <button
-                  class='ud-faq-btn collapsed'
-                  data-bs-toggle='collapse'
-                  data-bs-target='#collapseFour'
-                >
-                  <span class='icon flex-shrink-0'>
-                    <IconChevronDown class='w-8 h-8' />
-                  </span>
-                  <span>Can I use this template for commercial project?</span>
-                </button>
-                <div id='collapseFour' class='accordion-collapse collapse'>
-                  <div class='ud-faq-body'>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class='ud-single-faq wow fadeInUp' data-wow-delay='.15s'>
-              <div class='accordion'>
-                <button
-                  class='ud-faq-btn collapsed'
-                  data-bs-toggle='collapse'
-                  data-bs-target='#collapseFive'
-                >
-                  <span class='icon flex-shrink-0'>
-                    <IconChevronDown class='w-8 h-8' />
-                  </span>
-                  <span>Do you have plan releasing Play Pro?</span>
-                </button>
-                <div id='collapseFive' class='accordion-collapse collapse'>
-                  <div class='ud-faq-body'>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class='ud-single-faq wow fadeInUp' data-wow-delay='.2s'>
-              <div class='accordion'>
-                <button
-                  class='ud-faq-btn collapsed'
-                  data-bs-toggle='collapse'
-                  data-bs-target='#collapseSix'
-                >
-                  <span class='icon flex-shrink-0'>
-                    <IconChevronDown class='w-8 h-8' />
-                  </span>
-                  <span>Where and how to host this template?</span>
-                </button>
-                <div id='collapseSix' class='accordion-collapse collapse'>
-                  <div class='ud-faq-body'>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class='flex flex-col'>
+            {questions2.map(q => (
+              <Question {...q} />
+            ))}
           </div>
         </div>
       </div>
