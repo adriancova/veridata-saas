@@ -13,47 +13,47 @@ export default function Meta({
   href,
 }: MetaProps) {
   const organizationSchema = {
-    '@context': 'http://schema.org',
-    '@type': 'Organization',
-    name: 'Veridata',
-    url: 'https://www.veridata.lat',
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    name: "Veridata",
+    url: "https://www.veridata.lat",
     sameAs: [],
   };
   return (
     <>
       {/* HTML Meta Tags */}
       <title>{title}</title>
-      <meta name='description' content={description} />
+      <meta name="description" content={description} />
 
       {/* Google / Search Engine Tags */}
-      <meta itemProp='name' content={title} />
-      <meta itemProp='description' content={description} />
-      <link rel='canonical' href='https://www.veridata.lat' />
-      {imageUrl && <meta itemProp='image' content={imageUrl} />}
+      <meta itemProp="name" content={title} />
+      <meta itemProp="description" content={description} />
+      <link rel="canonical" href="https://www.veridata.lat" />
+      {imageUrl && <meta itemProp="image" content={imageUrl} />}
 
       {/* Facebook Meta Tags */}
-      <meta property='og:type' content='website' />
-      <meta property='og:site_name' content='Veridata' />
-      <meta property='og:locale' content='es' />
-      <meta property='og:title' content={title} />
-      <meta property='og:description' content={description} />
-      {href && <meta property='og:url' content={href} />}
-      {imageUrl && <meta property='og:image' content={imageUrl} />}
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Veridata" />
+      <meta property="og:locale" content="es" />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      {href && <meta property="og:url" content={href} />}
+      {imageUrl && <meta property="og:image" content={imageUrl} />}
 
       {/* Twitter Meta Tags */}
-      <meta name='twitter:card' content='summary_large_image' />
-      <meta name='twitter:title' content={title} />
-      <meta name='twitter:description' content={description} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
       <script
-        type='application/ld+json'
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
 
-      <link rel='stylesheet' href='css/animate.css' />
-      <link rel='stylesheet' href='css/ud-styles.css' />
-      {imageUrl && <meta name='twitter:image' content={imageUrl} />}
-      <script src='js/wow.min.js'></script>
-      <script src='js/main.js'></script>
+      <link rel="stylesheet" href="css/animate.css" />
+      <link rel="stylesheet" href="css/ud-styles.css" />
+      {imageUrl && <meta name="twitter:image" content={imageUrl} />}
+      <script src="js/wow.min.js"></script>
+      <script src="js/main.js"></script>
     </>
   );
 }

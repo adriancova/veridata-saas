@@ -1,10 +1,10 @@
-import IconBrandGithub from '@tabler_icons/tsx/brand-github.tsx';
-import IconGift from '@tabler_icons/tsx/gift.tsx';
-import IconDollar from '@tabler_icons/tsx/mood-dollar.tsx';
-import IconSourceCode from 'https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/source-code.tsx';
-import IconLayersSubtract from 'https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/layers-subtract.tsx';
+import IconBrandGithub from "@tabler_icons/tsx/brand-github.tsx";
+import IconGift from "@tabler_icons/tsx/gift.tsx";
+import IconDollar from "@tabler_icons/tsx/mood-dollar.tsx";
+import IconSourceCode from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/source-code.tsx";
+import IconLayersSubtract from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/layers-subtract.tsx";
 
-<IconBrandGithub class='w-6 h-6' />;
+<IconBrandGithub class="w-6 h-6" />;
 
 interface AboutCardProps {
   title: string;
@@ -22,16 +22,16 @@ const AboutCard = ({
   linkHref,
 }: AboutCardProps) => {
   return (
-    <div class='w-full sm:w-1/2 lg:w-1/4'>
-      <div class='ud-single-feature wow fadeInUp' data-wow-delay='.25s'>
-        <div class='ud-feature-icon'>
-          <Icon class='w-8 h-8' />
+    <div class="w-full sm:w-1/2 lg:w-1/4">
+      <div class="ud-single-feature wow fadeInUp" data-wow-delay=".25s">
+        <div class="ud-feature-icon">
+          <Icon class="w-8 h-8" />
         </div>
-        <div class='ud-feature-content'>
-          <h3 class='ud-feature-title'>{title}</h3>
-          <p class='ud-feature-desc w-4/5'>{description}</p>
+        <div class="ud-feature-content">
+          <h3 class="ud-feature-title">{title}</h3>
+          <p class="ud-feature-desc w-4/5">{description}</p>
           {linkText && linkHref && (
-            <a href={linkHref} class='ud-feature-link'>
+            <a href={linkHref} class="ud-feature-link">
               {linkText}
             </a>
           )}
@@ -44,35 +44,39 @@ const AboutCard = ({
 const About = () => {
   const aboutData = [
     {
-      title: 'Precios competitivos',
-      description: `Precios competitivos y planes flexibles para tus necesidades.`,
+      title: "Precios competitivos",
+      description:
+        `Precios competitivos y planes flexibles para tus necesidades.`,
       Icon: IconDollar,
 
-      linkText: 'Ver precios',
-      linkHref: '/#pricing',
+      linkText: "Ver precios",
+      linkHref: "/#pricing",
     },
     {
-      title: 'Calidad asegurada',
-      description: `Servicios optimizados y uso de edge functions con alta disponibilidad y respuestas rápidas globalmente.`,
+      title: "Calidad asegurada",
+      description:
+        `Servicios optimizados y uso de edge functions con alta disponibilidad y respuestas rápidas globalmente.`,
       Icon: IconSourceCode,
     },
     {
-      title: 'Integración Sencilla',
-      description: `Nuestros servicios están diseñados para una integración sencilla con el estándar OpenAPI.`,
+      title: "Integración Sencilla",
+      description:
+        `Nuestros servicios están diseñados para una integración sencilla con el estándar OpenAPI.`,
       Icon: IconLayersSubtract,
     },
     {
-      title: 'Comienza Gratis',
-      description: `Regístrate gratis y obtén un apiKey para probar nuestros servicios sin coste inicial.`,
+      title: "Comienza Gratis",
+      description:
+        `Regístrate gratis y obtén un apiKey para probar nuestros servicios sin coste inicial.`,
       Icon: IconGift,
-      linkText: 'Ir al dashboard',
-      linkHref: '/account',
+      linkText: "Ir al dashboard",
+      linkHref: "/account",
     },
   ];
   return (
-    <section id='about' class='ud-features'>
-      <div class='container mx-auto max-w-6xl'>
-        <div class='ud-section-title'>
+    <section id="about" class="ud-features">
+      <div class="container mx-auto max-w-6xl">
+        <div class="ud-section-title">
           <span>Veridata</span>
           <h2>Acerca de</h2>
           <p>
@@ -80,8 +84,8 @@ const About = () => {
             latinoamerica, cumpliendo con las 3B: bueno, bonito y barato.
           </p>
         </div>
-        <div class='flex flex-wrap flex-row flex-auto'>
-          {aboutData.map(a => {
+        <div class="flex flex-wrap flex-row flex-auto">
+          {aboutData.map((a) => {
             return <AboutCard {...a} />;
           })}
         </div>

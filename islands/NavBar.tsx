@@ -1,5 +1,5 @@
-import Logo from '@/components/Logo.tsx';
-import { useSignal } from '@preact/signals';
+import Logo from "@/components/Logo.tsx";
+import { useSignal } from "@preact/signals";
 
 interface NavItemProps {
   label: string;
@@ -10,8 +10,8 @@ interface NavItemProps {
 
 const NavItem = (props: NavItemProps) => {
   return (
-    <li class={`nav-item ${props.class ?? ''}`}>
-      <a class='ud-menu-scroll' href={props.href} onClick={props.onClick}>
+    <li class={`nav-item ${props.class ?? ""}`}>
+      <a class="ud-menu-scroll" href={props.href} onClick={props.onClick}>
         {props.label}
       </a>
     </li>
@@ -25,21 +25,21 @@ interface NavBarProps {
 const Navbar = (props: NavBarProps) => {
   const headerNavItems = [
     {
-      href: '/#',
-      label: 'Inicio',
-      class: 'active',
+      href: "/#",
+      label: "Inicio",
+      class: "active",
     },
     {
-      href: '/#about',
-      label: 'Acerca de',
+      href: "/#about",
+      label: "Acerca de",
     },
     {
-      href: '/#pricing',
-      label: 'Precios',
+      href: "/#pricing",
+      label: "Precios",
     },
     {
-      href: '/#contact',
-      label: 'Contacto',
+      href: "/#contact",
+      label: "Contacto",
     },
   ];
 
@@ -57,42 +57,42 @@ const Navbar = (props: NavBarProps) => {
   };
 
   return (
-    <header class='ud-header'>
-      <div class='container mx-auto'>
-        <nav class='flex justify-space-between sm:justify-start items-center flex-row flex-wrap relative'>
+    <header class="ud-header">
+      <div class="container mx-auto">
+        <nav class="flex justify-space-between sm:justify-start items-center flex-row flex-wrap relative">
           <Logo />
           <div
             class={`navbar-collapse flex grow hidden sm:flex ${
-              isCollapsed.value ? '' : 'show'
+              isCollapsed.value ? "" : "show"
             }`}
           >
-            <ul id='nav' class='flex flex-col md:flex-row navbar-nav mx-auto'>
-              {headerNavItems.map(i => (
+            <ul id="nav" class="flex flex-col md:flex-row navbar-nav mx-auto">
+              {headerNavItems.map((i) => (
                 <NavItem {...i} onClick={toggleOffMenu} />
               ))}
             </ul>
           </div>
 
-          {props.session ? (
-            <div>session - {props.session}</div>
-          ) : (
-            <div class='navbar-btn d-none d-sm-inline-block hidden sm:block ml-auto'>
-              <a class='ud-main-btn ud-white-btn' href='/account'>
-                Ingresar
-              </a>
-            </div>
-          )}
+          {props.session
+            ? <div>session - {props.session}</div>
+            : (
+              <div class="navbar-btn d-none d-sm-inline-block hidden sm:block ml-auto">
+                <a class="ud-main-btn ud-white-btn" href="/account">
+                  Ingresar
+                </a>
+              </div>
+            )}
 
           <button
             class={`navbar-toggler ml-4 md:hidden ${
-              isActive.value ? 'active' : ''
+              isActive.value ? "active" : ""
             }`}
-            aria-label='Menu toggler'
+            aria-label="Menu toggler"
             onClick={toggleMenu}
           >
-            <span class='toggler-icon'> </span>
-            <span class='toggler-icon'> </span>
-            <span class='toggler-icon'> </span>
+            <span class="toggler-icon"></span>
+            <span class="toggler-icon"></span>
+            <span class="toggler-icon"></span>
           </button>
         </nav>
       </div>
