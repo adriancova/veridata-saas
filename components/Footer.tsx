@@ -18,11 +18,11 @@ function Footer() {
   ];
   return (
     <footer
-      class={`${SITE_BAR_STYLES} flex-col sm:flex-row mt-8 flex bg-blue-600 text-white`}
+      class={`${SITE_BAR_STYLES} flex-col md:flex-row mt-8 flex bg-blue-600 text-white`}
     >
       <Logo />
 
-      <div class='flex flex-col sm:flex-row items-center justify-center'>
+      <div class='flex flex-col md:flex-row items-center justify-center'>
         <nav class={NAV_STYLES}>
           {footerNavItems.map(i => (
             <a href={i.href} class='text-white'>
@@ -30,7 +30,7 @@ function Footer() {
             </a>
           ))}
         </nav>
-        <a href='https://fresh.deno.dev' class='sm:ml-4'>
+        <a href='https://fresh.deno.dev' class='md:ml-4 mt-6 md:mt-0'>
           <img
             width='197'
             height='37'
