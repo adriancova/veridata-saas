@@ -20,7 +20,9 @@ const Contact = () => {
                     <Icon24Hours class='w-8 h-8' />
                   </div>
                   <div class='ud-info-meta'>
-                    <h5>Dudas o inquietudes?</h5>
+                    <span class='font-bold text-[#212b36] text-lg'>
+                      Dudas o inquietudes?
+                    </span>
                     <p>
                       Podemos ayudarte a resolver tus dudas mediante nuestro
                       email.
@@ -32,7 +34,9 @@ const Contact = () => {
                     <IconMailbox class='w-8 h-8' />
                   </div>
                   <div class='ud-info-meta'>
-                    <h5>Manda un correo a</h5>
+                    <h5 class='font-bold text-[#212b36] text-lg'>
+                      Manda un correo a
+                    </h5>
                     <a
                       href='mailto:contacto@veridata.lat?subject=Duda%20Veridata'
                       target='_blank'
