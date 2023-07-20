@@ -39,9 +39,10 @@ const Brands = () => {
       </Tooltip> */
       }
 
-      <img class="max-h-16" src="/images/hero/deno.svg" alt="deno" />
-      <img class="max-h-10" src="/images/hero/fresh.svg" alt="fresh" />
-      <img class="max-h-10" src="/images/hero/tailwind.svg" alt="tailwind" />
+      <img class="max-h-14" src="/images/brands/deno.svg" alt="deno" />
+      <img class="max-h-10" src="/images/brands/fresh.svg" alt="fresh" />
+      <img class="max-h-10" src="/images/brands/tailwind.svg" alt="tailwind" />
+      <img class="max-h-14" src="/images/brands/openapi.svg" alt="openapi" />
     </div>
   );
 };

@@ -16,10 +16,10 @@
 
     // === logo change
     if (ud_header.classList.contains('sticky')) {
-      logo.src = 'logo2.webp';
+      logo.src = 'images/logo/logo2.webp';
       title.classList.remove('text-white');
     } else {
-      logo.src = 'logo.svg';
+      logo.src = 'images/logo/logo.svg';
       title.classList.add('text-white');
     }
   };
