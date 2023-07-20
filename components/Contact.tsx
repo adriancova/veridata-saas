@@ -34,9 +34,9 @@ const Contact = () => {
                     <IconMailbox class='w-8 h-8' />
                   </div>
                   <div class='ud-info-meta'>
-                    <h5 class='font-bold text-[#212b36] text-lg'>
+                    <span class='font-bold text-[#212b36] text-lg'>
                       Manda un correo a
-                    </h5>
+                    </span>
                     <a
                       href='mailto:contacto@veridata.lat?subject=Duda%20Veridata'
                       target='_blank'
