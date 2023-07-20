@@ -87,6 +87,7 @@ const Navbar = (props: NavBarProps) => {
             class={`navbar-toggler ml-4 md:hidden ${
               isActive.value ? 'active' : ''
             }`}
+            aria-label='Menu toggler'
             onClick={toggleMenu}
           >
             <span class='toggler-icon'> </span>
