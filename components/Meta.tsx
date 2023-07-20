@@ -19,6 +19,12 @@ export default function Meta({
     url: 'https://www.veridata.lat',
     sameAs: [],
   };
+  const gtagScript = `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DE0K3SR2J4');`;
   return (
     <>
       {/* HTML Meta Tags */}
@@ -54,6 +60,11 @@ export default function Meta({
       {imageUrl && <meta name='twitter:image' content={imageUrl} />}
       <script src='js/wow.min.js'></script>
       <script src='js/main.js'></script>
+      <script
+        async
+        src='https://www.googletagmanager.com/gtag/js?id=G-DE0K3SR2J4'
+      ></script>
+      <script dangerouslySetInnerHTML={{ __html: gtagScript }} />
     </>
   );
 }
