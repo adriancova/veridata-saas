@@ -6,8 +6,11 @@ interface PricingCardProps {
   popular?: boolean;
 }
 const PricingCard = (props: PricingCardProps) => {
+  const formattedPrice = props.price
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   return (
-    <div class='col-lg-4 col-md-6 col-sm-10'>
+    <div class='w-full md:w-1/3'>
       <div
         class={`ud-single-pricing  wow fadeInUp ${props.classes}`}
         data-wow-delay='.15s'
@@ -15,7 +18,7 @@ const PricingCard = (props: PricingCardProps) => {
         {props.popular && <span class='ud-popular-tag'>POPULAR</span>}
         <div class='ud-pricing-header'>
           <h3>{props.name}</h3>
-          <h4>$ {props.price}/mes (mxn)</h4>
+          <h4>${formattedPrice} / mes</h4>
         </div>
         <div class='ud-pricing-body'>
           <u class='no-underline'>
@@ -23,7 +26,7 @@ const PricingCard = (props: PricingCardProps) => {
               Incluye un total de <strong>{props.calls}</strong> api requests
             </li>
             <li class='text-mygray'>
-              Costo por request de ${props.calls / props.price} centavos
+              Costo por request de ${(props.price / props.calls).toFixed(2)} mxn
             </li>
             <li class='text-mygray'>Puedes cancelar en cualquier momento</li>
           </u>
@@ -39,35 +42,31 @@ const PricingCard = (props: PricingCardProps) => {
 };
 
 const pricing_plans = [
-  { name: 'Desarrollador', price: 200, classes: 'first-item', calls: 1000 },
+  { name: 'Desarrollador', price: 150, classes: 'first-item', calls: 500 },
   {
     name: 'Startup',
     price: 1000,
     classes: 'active',
-    calls: 6000,
+    calls: 4000,
   },
-  { name: 'Business', price: 10000, classes: 'last-item', calls: 100000 },
+  { name: 'Business', price: 10000, classes: 'last-item', calls: 50000 },
 ];
 
 const Pricing = () => {
   return (
     <section id='pricing' class='ud-pricing'>
       <div class='container mx-auto max-w-6xl'>
-        <div class='row'>
-          <div class='col-lg-12'>
-            <div class='ud-section-title mx-auto text-center'>
-              <span>Precios</span>
-              <h2>Suscripciones</h2>
-              <p>
-                Ofrecemos suscripciones a la medida administradas mediante
-                stripe para mayor facilidad y tranquilidad. Veridata no almacena
-                tu informacion de pago.
-              </p>
-            </div>
-          </div>
+        <div class='ud-section-title mx-auto text-center'>
+          <span>Precios</span>
+          <h2>Suscripciones</h2>
+          <p>
+            Ofrecemos suscripciones a la medida administradas mediante stripe
+            para mayor facilidad y tranquilidad. Veridata no almacena tu
+            informacion de pago.
+          </p>
         </div>
 
-        <div class='row g-0 align-items-center justify-content-center'>
+        <div class='flex flex-col md:flex-row flex-wrap justify-center items-center'>
           {pricing_plans.map(pp => (
             <PricingCard {...pp} />
           ))}
@@ -76,20 +75,19 @@ const Pricing = () => {
           <span>Alternativas</span>
           <h2>RapidApi</h2>
           <p>
-            Si lo prefieres tenemos publicada el api en rapidapi aunque con un
-            costo mayor en los planes, pero la plataforma nos permite ofrecer un
-            plan base y adicionalmente un cobro por llamada extra que puede ser
-            lo ideal en tu caso si ninguno de los planes se ajusta a tus
-            necesidades.
+            Si lo prefieres, ofrecemos nuestra API en RapidApi aunque a un costo
+            mayor. Si nuestros planes actuales no se ajustan a tus necesidades,
+            puedes considerar RapidApi, ya que permite un plan base y cobra por
+            llamada extra.
           </p>
           <a href='/rapidapi'>Ver los planes en RapidApi</a>
         </div>
         <div class='ud-section-title mx-auto text-center'>
           <h2>Enterprise</h2>
           <p>
-            Si requieres de un numero de llamadas mayor a las disponibles en el
-            Business plan, porfavor manda un correo a contacto@veridata.lat para
-            armar un plan de acuerdo a tus necesidades
+            Si tus necesidades exceden los límites del plan Business, por favor
+            envía un correo a contacto@veridata.lat. Podemos diseñar un plan
+            personalizado.
           </p>
         </div>
       </div>
