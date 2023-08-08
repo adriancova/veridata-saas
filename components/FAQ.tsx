@@ -23,7 +23,7 @@ const questions2 = [
   {
     question: "¿Cómo funciona el plan gratuito de Validatos? ",
     answer:
-      "Cada uno de los endpoints que ofrecemos tiene un número limitado de validaciones gratuitas para que puedas probar el servicio y comprobar las respuestas. Además, cada servicio ofrece la posibilidad de enviar datos de prueba, los cuales no se suman al total de llamadas y te servirán para probar tu integración.",
+      "Ofrecemos un número limitado de validaciones gratuitas para que puedas probar el servicio y comprobar las respuestas. Además, cada servicio ofrece la posibilidad de enviar datos de prueba, los cuales no se suman al total de llamadas y te servirán para probar tu integración.",
   },
   {
     question:
