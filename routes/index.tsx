@@ -17,7 +17,6 @@ import About from "../components/About.tsx";
 import Pricing from "../components/Pricing.tsx";
 import FAQ from "../components/FAQ.tsx";
 import Contact from "../components/Contact.tsx";
-import Navbar from "../islands/NavBar.tsx";
 
 interface HomePageData extends State {
   itemsUsers: User[];
@@ -60,7 +59,6 @@ export const handler: Handlers<HomePageData, State> = {
 export default function HomePage(props: PageProps<HomePageData>) {
   return (
     <>
-      <Navbar session={props.session} />
       <Hero />
       <About />
       <FAQ />

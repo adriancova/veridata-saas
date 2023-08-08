@@ -77,7 +77,7 @@ const Navbar = (props: NavBarProps) => {
 
   return (
     <header
-      class={`ud-header ${isSticky.value ? "sticky" : ""}`}
+      class={`ud-header ${isSticky.value ? "sticky " : "bg-[#3056d3]"}`}
       ref={headerRef}
     >
       <div class="container mx-auto">

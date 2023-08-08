@@ -18,7 +18,7 @@ function Footer() {
   ];
   return (
     <footer
-      class={`${SITE_BAR_STYLES} flex-col md:flex-row mt-8 flex bg-blue-600 text-white`}
+      class={`${SITE_BAR_STYLES} flex-col md:flex-row flex bg-blue-600 text-white`}
     >
       <Logo />
 
