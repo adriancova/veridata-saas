@@ -1,5 +1,6 @@
 import Logo from "@/components/Logo.tsx";
 import { useSignal } from "@preact/signals";
+import { useEffect, useRef } from "preact/hooks";
 
 interface NavItemProps {
   label: string;
@@ -45,6 +46,24 @@ const Navbar = (props: NavBarProps) => {
 
   const isCollapsed = useSignal(true);
   const isActive = useSignal(false);
+  const isSticky = useSignal(false);
+
+  const headerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sticky = headerRef.current!.offsetTop;
+
+      if (window.pageYOffset > sticky) {
+        isSticky.value = true;
+      } else {
+        isSticky.value = false;
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleMenu = () => {
     isCollapsed.value = !isCollapsed.value;
@@ -57,10 +76,13 @@ const Navbar = (props: NavBarProps) => {
   };
 
   return (
-    <header class="ud-header">
+    <header
+      class={`ud-header ${isSticky.value ? "sticky" : ""}`}
+      ref={headerRef}
+    >
       <div class="container mx-auto">
         <nav class="flex justify-space-between sm:justify-start items-center flex-row flex-wrap relative">
-          <Logo />
+          <Logo darkTheme={!isSticky.value} />
           <div
             class={`navbar-collapse flex grow hidden sm:flex ${
               isCollapsed.value ? "" : "show"

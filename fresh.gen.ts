@@ -24,12 +24,11 @@ import * as $18 from "./routes/signout.ts";
 import * as $19 from "./routes/stats.tsx";
 import * as $20 from "./routes/submit.tsx";
 import * as $21 from "./routes/user/[username].tsx";
-import * as $$0 from "./islands/Brands.tsx";
-import * as $$1 from "./islands/Chart.tsx";
-import * as $$2 from "./islands/NavBar.tsx";
-import * as $$3 from "./islands/PageInput.tsx";
-import * as $$4 from "./islands/Question.tsx";
-import * as $$5 from "./islands/VoteButton.tsx";
+import * as $$0 from "./islands/Chart.tsx";
+import * as $$1 from "./islands/NavBar.tsx";
+import * as $$2 from "./islands/PageInput.tsx";
+import * as $$3 from "./islands/Question.tsx";
+import * as $$4 from "./islands/VoteButton.tsx";
 
 const manifest = {
   routes: {
@@ -57,12 +56,11 @@ const manifest = {
     "./routes/user/[username].tsx": $21,
   },
   islands: {
-    "./islands/Brands.tsx": $$0,
-    "./islands/Chart.tsx": $$1,
-    "./islands/NavBar.tsx": $$2,
-    "./islands/PageInput.tsx": $$3,
-    "./islands/Question.tsx": $$4,
-    "./islands/VoteButton.tsx": $$5,
+    "./islands/Chart.tsx": $$0,
+    "./islands/NavBar.tsx": $$1,
+    "./islands/PageInput.tsx": $$2,
+    "./islands/Question.tsx": $$3,
+    "./islands/VoteButton.tsx": $$4,
   },
   baseUrl: import.meta.url,
 };

@@ -19,7 +19,11 @@ export default function Meta({
     url: "https://www.validatos.io",
     sameAs: [],
   };
-  const gtagScript = `
+  const customScript = `
+  // ===== wow js
+  new WOW().init();
+
+  // gTag
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -58,14 +62,20 @@ export default function Meta({
       <link rel="stylesheet" href="css/animate.css" />
       <link rel="stylesheet" href="css/ud-styles.css" />
       {imageUrl && <meta name="twitter:image" content={imageUrl} />}
-      <script src="js/wow.min.js"></script>
-      <script src="js/main.js"></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossOrigin="anonymous"
+        referrerpolicy="no-referrer"
+      >
+      </script>
+      {/* <script src="js/main.js"></script> */}
       <script
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-ELXZX3W6EC"
       >
       </script>
-      <script dangerouslySetInnerHTML={{ __html: gtagScript }} />
+      <script dangerouslySetInnerHTML={{ __html: customScript }} />
     </>
   );
 }
