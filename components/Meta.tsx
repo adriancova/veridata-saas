@@ -19,6 +19,12 @@ export default function Meta({
     url: "https://www.validatos.io",
     sameAs: [],
   };
+  const gtagScript = `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ELXZX3W6EC');`;
   return (
     <>
       {/* HTML Meta Tags */}
@@ -54,6 +60,12 @@ export default function Meta({
       {imageUrl && <meta name="twitter:image" content={imageUrl} />}
       <script src="js/wow.min.js"></script>
       <script src="js/main.js"></script>
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-ELXZX3W6EC"
+      >
+      </script>
+      <script dangerouslySetInnerHTML={{ __html: gtagScript }} />
     </>
   );
 }
