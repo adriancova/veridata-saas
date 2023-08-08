@@ -30,8 +30,7 @@ const Hero = () => {
                   <a
                     href="/docs"
                     rel="nofollow noopener"
-                    target="_blank"
-                    class="ud-main-btn ud-link-btn"
+                    class="bg-white/20 text-white m-2 py-4 px-3 rounded-md"
                   >
                     Documentación
                   </a>
