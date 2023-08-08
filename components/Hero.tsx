@@ -11,7 +11,7 @@ const Hero = () => {
                 Validación de datos confiable, rápida y accesible
               </h1>
               <p class="ud-hero-desc">
-                Veridata ofrece una serie de APIs para validación de datos de
+                Validatos ofrece una serie de APIs para validación de datos de
                 identidad mas cómunes en lationamérica, por ejemplo INE en
                 México o la Registraduria de Colombia.
               </p>

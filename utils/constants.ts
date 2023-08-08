@@ -1,7 +1,7 @@
 // Copyright 2023 the Deno authors. All rights reserved. MIT license.
-export const SITE_NAME = "Veridata - Servicios de Validación de Datos";
+export const SITE_NAME = "Validatos - Servicios de Validación de Datos";
 export const SITE_DESCRIPTION =
-  "Veridata ofrece servicios de validación de datos con precios competitivos, alta disponibilidad y fácil integración.";
+  "Validatos ofrece servicios de validación de datos con precios competitivos, alta disponibilidad y fácil integración.";
 export const REDIRECT_PATH_AFTER_LOGIN = "/";
 
 /**

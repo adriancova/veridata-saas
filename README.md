@@ -1,6 +1,6 @@
-## Veridata
+## Validatos
 
-Veridata is my saas/api project that enables consumers to perform easy and
+Validatos is my saas/api project that enables consumers to perform easy and
 reliable validation of kyc pieced of data, focused on latam.
 
 Website code is free for anyone to use as template/inspiration.

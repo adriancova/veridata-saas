@@ -38,10 +38,10 @@ const Contact = () => {
                       Manda un correo a
                     </span>
                     <a
-                      href="mailto:contacto@veridata.lat?subject=Duda%20Veridata"
+                      href="mailto:contacto@validatos.io?subject=Duda%20Validatos"
                       target="_blank"
                     >
-                      contacto@veridata.lat
+                      contacto@validatos.io
                     </a>
                   </div>
                 </div>

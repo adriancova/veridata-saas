@@ -61,7 +61,7 @@ const Pricing = () => {
           <h2>Suscripciones</h2>
           <p>
             Ofrecemos suscripciones a la medida administradas mediante stripe
-            para mayor facilidad y tranquilidad. Veridata no almacena tu
+            para mayor facilidad y tranquilidad. Validatos no almacena tu
             informacion de pago.
           </p>
         </div>
@@ -84,7 +84,8 @@ const Pricing = () => {
           <h2>Enterprise</h2>
           <p>
             Si tus necesidades exceden los límites del plan Business, por favor
-            envía un correo a contacto@veridata.lat. Podemos diseñar un plan
+            envía un correo a{" "}
+            <strong>contacto@validatos.io</strong>. Podemos diseñar un plan
             personalizado.
           </p>
         </div>

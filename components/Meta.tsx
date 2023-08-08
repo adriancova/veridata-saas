@@ -15,8 +15,8 @@ export default function Meta({
   const organizationSchema = {
     "@context": "http://schema.org",
     "@type": "Organization",
-    name: "Veridata",
-    url: "https://www.veridata.lat",
+    name: "Validatos",
+    url: "https://www.validatos.io",
     sameAs: [],
   };
   return (
@@ -28,12 +28,12 @@ export default function Meta({
       {/* Google / Search Engine Tags */}
       <meta itemProp="name" content={title} />
       <meta itemProp="description" content={description} />
-      <link rel="canonical" href="https://www.veridata.lat" />
+      <link rel="canonical" href="https://www.validatos.io" />
       {imageUrl && <meta itemProp="image" content={imageUrl} />}
 
       {/* Facebook Meta Tags */}
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Veridata" />
+      <meta property="og:site_name" content="Validatos" />
       <meta property="og:locale" content="es" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />

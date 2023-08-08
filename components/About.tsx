@@ -77,10 +77,10 @@ const About = () => {
     <section id="about" class="ud-features">
       <div class="container mx-auto max-w-6xl">
         <div class="ud-section-title">
-          <span>Veridata</span>
+          <span>Validatos</span>
           <h2>Acerca de</h2>
           <p>
-            El objetivo de veridata es ofrecer servicios api de primera para
+            El objetivo de Validatos es ofrecer servicios api de primera para
             latinoamerica, cumpliendo con las 3B: bueno, bonito y barato.
           </p>
         </div>
