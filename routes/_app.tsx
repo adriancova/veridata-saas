@@ -19,8 +19,9 @@ export default function App(props: AppProps) {
         />
       </Head>
       <Navbar session={props.session} />
-      <div class="mb-24"></div>
-      <props.Component />
+      <div class="mt-20 sm:mt-24">
+        <props.Component />
+      </div>
       <Footer />
     </>
   );
