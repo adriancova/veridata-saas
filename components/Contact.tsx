@@ -68,7 +68,7 @@ const Contact = () => {
                   <input
                     type="email"
                     name="email"
-                    placeholder="example@yourmail.com"
+                    placeholder="ejemplo@correo.com"
                   />
                 </div>
                 <div class="ud-form-group">
