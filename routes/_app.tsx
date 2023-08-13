@@ -19,7 +19,7 @@ export default function App(props: AppProps) {
         />
       </Head>
       <Navbar session={props.session} />
-      <div class="mt-20 sm:mt-24">
+      <div class="mt-20 sm:mt-24 grow">
         <props.Component />
       </div>
       <Footer />
