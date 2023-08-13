@@ -6,7 +6,7 @@ interface DogeResponse {
 
 export default async function NotFoundPage() {
   const resp = await fetch(
-    "https://dog.ceo/api/breeds/image/randomkm",
+    "https://dog.ceo/api/breeds/image/random",
   );
 
   if (!resp.ok) {
