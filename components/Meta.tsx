@@ -60,6 +60,7 @@ export default function Meta({
       />
 
       <link rel="stylesheet" href="css/animate.css" />
+      <link rel="stylesheet" href="css/styles.css" />
       <link rel="stylesheet" href="css/ud-styles.css" />
       {imageUrl && <meta name="twitter:image" content={imageUrl} />}
       <script
