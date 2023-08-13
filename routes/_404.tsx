@@ -1,11 +1,19 @@
-// Copyright 2023 the Deno authors. All rights reserved. MIT license.
-export default function NotFoundPage() {
-  return (
-    <main class="flex-1 flex flex-col justify-center p-4 text-center space-y-4">
-      <h1 class="text-4xl inline-block font-bold">Page not found</h1>
-      <p class="text-xl text-blue-900">
-        <a href="/">Return home</a>
-      </p>
-    </main>
+import NotFound from "@/components/NotFound.tsx";
+
+interface DogeResponse {
+  message: string;
+}
+
+export default async function NotFoundPage() {
+  const resp = await fetch(
+    "https://dog.ceo/api/breeds/image/randomkm",
   );
+
+  if (!resp.ok) {
+    return <NotFound img="/images/404/engineer-doge.jpg" />;
+  }
+
+  const { message: img } = (await resp.json()) as DogeResponse;
+
+  return <NotFound img={img} />;
 }
